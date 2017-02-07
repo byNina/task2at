@@ -19,13 +19,13 @@ public class Menu {
 	private SentenceUtil sentUtil;
 
 	public void greeting() {
-		System.out.println("Данное приложение в каждом слове текста k-ю букву заменяет заданным символом.");
-		System.out.println("Если k больше длины слова, корректировка не выполняетcя.");
+		System.out.println("Р вЂќР В°Р Р…Р Р…Р С•Р Вµ Р С—РЎР‚Р С‘Р В»Р С•Р В¶Р ВµР Р…Р С‘Р Вµ Р Р† Р С”Р В°Р В¶Р Т‘Р С•Р С РЎРѓР В»Р С•Р Р†Р Вµ РЎвЂљР ВµР С”РЎРѓРЎвЂљР В° k-РЎР‹ Р В±РЎС“Р С”Р Р†РЎС“ Р В·Р В°Р СР ВµР Р…РЎРЏР ВµРЎвЂљ Р В·Р В°Р Т‘Р В°Р Р…Р Р…РЎвЂ№Р С РЎРѓР С‘Р СР Р†Р С•Р В»Р С•Р С.");
+		System.out.println("Р•СЃР»Рё k Р±РѕР»СЊС€Рµ РґР»РёРЅС‹ СЃР»РѕРІР°, РєРѕСЂСЂРµРєС‚РёСЂРѕРІРєР° РЅРµ РІС‹РїРѕР»РЅСЏРµС‚cСЏ.");
 	}
 
 	public void run() {
 		System.out.println("***************");
-		System.out.println("Выберите действие:");
+		System.out.println("Р’С‹Р±РµСЂРёС‚Рµ РґРµР№СЃС‚РІРёРµ:");
 
 		if (sc == null) {
 			sc = new Scanner(System.in);
@@ -35,13 +35,13 @@ public class Menu {
 		boolean isNumber;
 		do {
 			isNumber = true;
-			System.out.println("1. Ввести текст в консоли.");
-			System.out.println("0. Выйти из приложения.");
+			System.out.println("1. Р’РІРµСЃС‚Рё С‚РµРєСЃС‚ РІ РєРѕРЅСЃРѕР»Рё.");
+			System.out.println("0. Р’С‹Р№С‚Рё РёР· РїСЂРёР»РѕР¶РµРЅРёСЏ.");
 			try {
 				userChoice = Integer.parseInt(sc.nextLine());
 			} catch (Exception e) {
 				isNumber = false;
-				System.out.println("Ошибка! Введите номер пункта меню.");
+				System.out.println("РћС€РёР±РєР°! Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РїСѓРЅРєС‚Р° РјРµРЅСЋ.");
 			}
 		} while (!isNumber);
 
@@ -54,14 +54,14 @@ public class Menu {
 			break;
 		default:
 			System.out.println(
-					"Ошибка! Пункта \"" + userChoice + "\" нет в меню. Введите номер пункта из предложенных ниже.");
+					"РћС€РёР±РєР°! РџСѓРЅРєС‚Р° \"" + userChoice + "\" РЅРµС‚ РІ РјРµРЅСЋ. Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РїСѓРЅРєС‚Р° РёР· РїСЂРµРґР»РѕР¶РµРЅРЅС‹С… РЅРёР¶Рµ.");
 			run();
 		}
 
 	}
 
 	private void enterText() {
-		System.out.println("Введите текст (Чтобы закончить ввод текста нажмите Enter дважды):");
+		System.out.println("Р’РІРµРґРёС‚Рµ С‚РµРєСЃС‚ (Р§С‚РѕР±С‹ Р·Р°РєРѕРЅС‡РёС‚СЊ РІРІРѕРґ С‚РµРєСЃС‚Р° РЅР°Р¶РјРёС‚Рµ Enter РґРІР°Р¶РґС‹):");
 		List<Sentence> sentences = new ArrayList<Sentence>();
 
 		boolean isAcceptable;
@@ -78,12 +78,12 @@ public class Menu {
 					sentences.add(sentence);
 				}
 			} catch (Exception e) {
-				System.out.println("Ошибка! Введите текст.");
+				System.out.println("РћС€РёР±РєР°! Р’РІРµРґРёС‚Рµ С‚РµРєСЃС‚.");
 				isAcceptable = false;
 			}
 		} while (!isAcceptable);
 
-		System.out.println("Текст успешно введен.");
+		System.out.println("РўРµРєСЃС‚ СѓСЃРїРµС€РЅРѕ РІРІРµРґРµРЅ.");
 		System.out.println();
 
 		afterEnterText(sentences);
@@ -92,9 +92,9 @@ public class Menu {
 	private void afterEnterText(List<Sentence> sentences) {
 
 		System.out.println("***************");
-		System.out.println("Выберите действие:");
-		System.out.println("1. Заменить k-ю букву заданным символом.");
-		System.out.println("0. Выйти из приложения.");
+		System.out.println("Р’С‹Р±РµСЂРёС‚Рµ РґРµР№СЃС‚РІРёРµ:");
+		System.out.println("1. Р—Р°РјРµРЅРёС‚СЊ k-СЋ Р±СѓРєРІСѓ Р·Р°РґР°РЅРЅС‹Рј СЃРёРјРІРѕР»РѕРј.");
+		System.out.println("0. Р’С‹Р№С‚Рё РёР· РїСЂРёР»РѕР¶РµРЅРёСЏ.");
 
 		int userChoice = 0;
 		boolean isNumber;
@@ -103,7 +103,7 @@ public class Menu {
 			try {
 				userChoice = Integer.parseInt(sc.nextLine());
 			} catch (Exception e) {
-				System.out.println("Ошибка! Введите номер пункта меню.");
+				System.out.println("РћС€РёР±РєР°! Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РїСѓРЅРєС‚Р° РјРµРЅСЋ.");
 				isNumber = false;
 			}
 		} while (!isNumber);
@@ -118,7 +118,7 @@ public class Menu {
 			break;
 		default:
 			System.out.println(
-					"Ошибка! Пункта \"" + userChoice + "\" нет в меню. Введите номер пункта из предложенных ниже.");
+					"РћС€РёР±РєР°! РџСѓРЅРєС‚Р° \"" + userChoice + "\" РЅРµС‚ РІ РјРµРЅСЋ. Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РїСѓРЅРєС‚Р° РёР· РїСЂРµРґР»РѕР¶РµРЅРЅС‹С… РЅРёР¶Рµ.");
 			afterEnterText(sentences);
 		}
 
@@ -127,7 +127,7 @@ public class Menu {
 	private void setChar() {
 		System.out.println("***************");
 
-		System.out.println("Введите номер заменяемой буквы:");
+		System.out.println("Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ Р·Р°РјРµРЅСЏРµРјРѕР№ Р±СѓРєРІС‹:");
 		boolean isNumber;
 		int charIndex = -1;
 		do {
@@ -135,16 +135,16 @@ public class Menu {
 			try {
 				charIndex = Integer.parseInt(sc.nextLine()) - 1;
 				if (charIndex < 0) {
-					System.out.println("Ошибка! Введите номер заменяемой буквы в виде целого положительного числа.");
+					System.out.println("РћС€РёР±РєР°! Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ Р·Р°РјРµРЅСЏРµРјРѕР№ Р±СѓРєРІС‹ РІ РІРёРґРµ С†РµР»РѕРіРѕ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРіРѕ С‡РёСЃР»Р°.");
 					isNumber = false;
 				}
 			} catch (Exception e) {
-				System.out.println("Ошибка! Введите номер заменяемой буквы.");
+				System.out.println("РћС€РёР±РєР°! Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ Р·Р°РјРµРЅСЏРµРјРѕР№ Р±СѓРєРІС‹.");
 				isNumber = false;
 			}
 		} while (!isNumber);
 
-		System.out.println("Введите необходимую букву:");
+		System.out.println("Р’РІРµРґРёС‚Рµ РЅРµРѕР±С…РѕРґРёРјСѓСЋ Р±СѓРєРІСѓ:");
 		boolean isChar;
 		char charToChange = '\u0000';
 		String userEnter;
@@ -155,11 +155,11 @@ public class Menu {
 				if (isChar(userEnter)) {
 					charToChange = userEnter.charAt(0);
 				} else {
-					System.out.println("Ошибка! Введите необходимую букву в виде одного символа.");
+					System.out.println("РћС€РёР±РєР°! Р’РІРµРґРёС‚Рµ РЅРµРѕР±С…РѕРґРёРјСѓСЋ Р±СѓРєРІСѓ РІ РІРёРґРµ РѕРґРЅРѕРіРѕ СЃРёРјРІРѕР»Р°.");
 					isChar = false;
 				}
 			} catch (Exception e) {
-				System.out.println("Ошибка! Введите необходимую букву в виде одного символа.");
+				System.out.println("РћС€РёР±РєР°! Р’РІРµРґРёС‚Рµ РЅРµРѕР±С…РѕРґРёРјСѓСЋ Р±СѓРєРІСѓ РІ РІРёРґРµ РѕРґРЅРѕРіРѕ СЃРёРјРІРѕР»Р°.");
 				isChar = false;
 			}
 		} while (!isChar);
@@ -168,7 +168,7 @@ public class Menu {
 	}
 
 	private boolean isChar(String userEnter) {
-		Pattern pattern = Pattern.compile("[a-zA-Zа-яА-ЯёЁ]");
+		Pattern pattern = Pattern.compile("[a-zA-ZР°-СЏРђ-РЇС‘РЃ]");
 		Matcher matcher = pattern.matcher(userEnter);
 		if (matcher.matches()) {
 			return true;
@@ -179,9 +179,9 @@ public class Menu {
 
 	private void afterSetChar(int charIndex, char charToChange) {
 
-		System.out.println("1. Заменить " + (charIndex + 1) + "-ую букву каждого слова на " + charToChange);
-		System.out.println("2. Ввести другие значения");
-		System.out.println("0. Выйти из приложения.");
+		System.out.println("1. Р—Р°РјРµРЅРёС‚СЊ " + (charIndex + 1) + "-СѓСЋ Р±СѓРєРІСѓ РєР°Р¶РґРѕРіРѕ СЃР»РѕРІР° РЅР° " + charToChange);
+		System.out.println("2. Р’РІРµСЃС‚Рё РґСЂСѓРіРёРµ Р·РЅР°С‡РµРЅРёСЏ");
+		System.out.println("0. Р’С‹Р№С‚Рё РёР· РїСЂРёР»РѕР¶РµРЅРёСЏ.");
 
 		int userChoice = 0;
 		boolean isNumber;
@@ -190,7 +190,7 @@ public class Menu {
 			try {
 				userChoice = Integer.parseInt(sc.nextLine());
 			} catch (Exception e) {
-				System.out.println("Ошибка! Введите номер пункта меню.");
+				System.out.println("РћС€РёР±РєР°! Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РїСѓРЅРєС‚Р° РјРµРЅСЋ.");
 				isNumber = false;
 			}
 		} while (!isNumber);
@@ -208,7 +208,7 @@ public class Menu {
 			break;
 		default:
 			System.out.println(
-					"Ошибка! Пункта \"" + userChoice + "\" нет в меню. Введите номер пункта из предложенных ниже.");
+					"РћС€РёР±РєР°! РџСѓРЅРєС‚Р° \"" + userChoice + "\" РЅРµС‚ РІ РјРµРЅСЋ. Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РїСѓРЅРєС‚Р° РёР· РїСЂРµРґР»РѕР¶РµРЅРЅС‹С… РЅРёР¶Рµ.");
 			afterSetChar(charIndex, charToChange);
 		}
 	}
@@ -223,9 +223,9 @@ public class Menu {
 	}
 
 	private void afterShowResult() {
-		System.out.println("1. Ввести новый текст");
-		System.out.println("2. Ввести другие значения");
-		System.out.println("0. Выйти из приложения.");
+		System.out.println("1. Р’РІРµСЃС‚Рё РЅРѕРІС‹Р№ С‚РµРєСЃС‚");
+		System.out.println("2. Р’РІРµСЃС‚Рё РґСЂСѓРіРёРµ Р·РЅР°С‡РµРЅРёСЏ");
+		System.out.println("0. Р’С‹Р№С‚Рё РёР· РїСЂРёР»РѕР¶РµРЅРёСЏ.");
 
 		int userChoice = 0;
 		boolean isNumber;
@@ -234,7 +234,7 @@ public class Menu {
 			try {
 				userChoice = Integer.parseInt(sc.nextLine());
 			} catch (Exception e) {
-				System.out.println("Ошибка! Введите номер пункта меню.");
+				System.out.println("РћС€РёР±РєР°! Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РїСѓРЅРєС‚Р° РјРµРЅСЋ.");
 				isNumber = false;
 			}
 		} while (!isNumber);
@@ -251,14 +251,14 @@ public class Menu {
 			break;
 		default:
 			System.out.println(
-					"Ошибка! Пункта \"" + userChoice + "\" нет в меню. Введите номер пункта из предложенных ниже.");
+					"РћС€РёР±РєР°! РџСѓРЅРєС‚Р° \"" + userChoice + "\" РЅРµС‚ РІ РјРµРЅСЋ. Р’РІРµРґРёС‚Рµ РЅРѕРјРµСЂ РїСѓРЅРєС‚Р° РёР· РїСЂРµРґР»РѕР¶РµРЅРЅС‹С… РЅРёР¶Рµ.");
 			afterShowResult();
 		}
 
 	}
 
 	private void exit() {
-		System.out.println("Приложение завершило работу.");
+		System.out.println("РџСЂРёР»РѕР¶РµРЅРёРµ Р·Р°РІРµСЂС€РёР»Рѕ СЂР°Р±РѕС‚Сѓ.");
 		sc.close();
 	}
 }
