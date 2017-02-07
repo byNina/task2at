@@ -95,16 +95,4 @@ public class SentenceUtil {
 		return words;
 	}
 
-	// private static boolean isChar(char charAt) {
-	// Pattern pattern =
-	// Pattern.compile("[a-zA-Z\u0430-\u044F\u0410-\u042F\u0451\u0401]");
-	// Matcher matcher = pattern.matcher(String.valueOf(charAt));
-	// if (matcher.matches()) {
-	// return true;
-	// } else {
-	// return false;
-	// }
-	//
-	// }
-
 }
